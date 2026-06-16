@@ -93,11 +93,11 @@ def vetor_aleatorio(n):
 def testar_quicksort(quicksort, gerador, n):
     v = gerador(n)
 
-    inicio = time.time()
+    inicio = time.perf_counter()
 
     quicksort(v, 0, n - 1)
 
-    fim = time.time()
+    fim = time.perf_counter()
 
     return tempo_decorrido(inicio, fim)
 
